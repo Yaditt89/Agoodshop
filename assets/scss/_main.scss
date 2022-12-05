@@ -1,0 +1,226 @@
+@import "variables";
+
+main.wrapper {
+  .w-section {
+    max-width: 80%;
+    margin: 20px auto;
+    //----------------------------SHARED STYLES----------------------------//
+    .h2-title {
+      margin: 5px 0px;
+      font-family: $typography-secondary;
+      font-size: $font-xl-responsive;
+    }
+    .p-large {
+      line-height: 1.3em;
+    }
+    .p-small {
+      font-size: $font-small;
+    }
+    //----------------------------SECCIÓN 1----------------------------//
+    .s1 {
+      display: flex;
+      gap: 30px;
+      flex-direction: column;
+      .img-product {
+        position: relative;
+        flex-basis: 40%;
+        flex-grow: 1;
+        .capacity {
+          position: absolute;
+          padding: 5px;
+          background-color: rgb(11 126 108);
+          color: $color-secondary;
+          border-radius: 4px;
+          margin: 20px;
+        }
+      }
+      .description-product {
+        flex-basis: 60%;
+        flex-grow: 1;
+        .ofert {
+          color: $ofert-color;
+          font-weight: 700;
+          font-family: $typography-secondary;
+        }
+        .buying {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          margin: 20px auto;
+          .price {
+            font-size: $font-xl-responsive;
+            font-weight: 700;
+            font-family: $typography-secondary;
+          }
+          .a-btn.buy {
+            text-decoration: none;
+            background-color: $btn-prymary;
+            color: $color-secondary;
+            &:hover {
+              background-color: $btn-secondary;
+            }
+          }
+        }
+        //Para que quede como la maqueta propuesta la parte de (facilidades que ofrece la compañia para la venta) hay activar el flex y el resto de las propiedades comentadas y en el responsive cambiar "flex-wrap : nowrap", lo he hecho diferente por preferencia...espero no sea un problema :)
+        .plus {
+          //display: flex;
+          list-style: none;
+          padding: 0px;
+          //gap: 2px;
+          //flex-wrap: wrap;
+          //justify-content: space-between;
+          .plus-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-basis: 33%;
+            margin: -10px auto;
+          }
+        }
+      }
+    }
+    //----------------------------SECCIÓN 2----------------------------//
+    .s2 {
+      margin-top: 20px;
+      .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 17px;
+        .card-item {
+          align-items: center;
+          flex-basis: 25%;
+          border: $border;
+          border-radius: 7px;
+          padding: 10px;
+          text-align: center;
+          &:hover {
+            transform: scale(1.05);
+          }
+          .img-fondo {
+            background-color: $color-secondary;
+            .img-responsive.img-card {
+              max-height: 50%;
+              max-width: 70%;
+            }
+          }
+          .description-accessory {
+            text-align: start;
+            .accessory_name {
+              margin: 15px auto 10px;
+              font-family: $typography-secondary;
+            }
+            .pill {
+              padding: 7px 10px;
+              border-radius: 7px;
+              font-size: 13px;
+              color: $color-secondary;
+            }
+            .pill.p1 {
+              background-color: $ofert-color;
+            }
+            .pill.p2 {
+              background-color: $btn-prymary;
+            }
+            .p-large.p-small.p-pill {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+    //----------------------------SECCIÓN 3----------------------------//
+    .s3 {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      background-color: #eef7fe;
+      padding: 20px;
+      border-radius: 7px;
+      flex-direction: column;
+      .lottery-description {
+        flex-basis: 60%;
+        .l-title {
+          font-size: $font-xl;
+          font-weight: 700;
+          margin: 0px auto;
+          font-family: $typography-secondary;
+        }
+      }
+      .lottery-form {
+        flex-basis: 30%;
+        margin-top: 20px;
+        flex-direction: column;
+        .form-label.p-small {
+          display: block;
+          margin-bottom: 5px;
+        }
+        .form-input {
+          margin-bottom: 20px;
+          width: 100%;
+          height: 40px;
+          padding-left: 5px;
+          border: $border;
+          border-radius: 7px;
+        }
+        .btn-form {
+          display: block;
+          border: $border;
+          padding: 10px 13px;
+          border-radius: 7px;
+          background-color: $btn-prymary;
+          color: $color-secondary;
+          &:hover {
+            background-color: $btn-secondary;
+          }
+        }
+      }
+    }
+  }
+  //----------------------------RESPONSIVE----------------------------//
+  @media (min-width: 1024px) {
+    .w-section {
+      margin: 50px auto;
+      .h2-title {
+        font-size: $font-xl;
+      }
+      .s1 {
+        flex-direction: row;
+        .description-product {
+          .buying {
+            margin: 30px auto auto;
+            .price {
+              font-size: $font-xl;
+            }
+          }
+          .plus {
+            display: flex;
+            //flex-wrap: nowrap;
+            gap: 30px;
+            .plus-item {
+              margin: auto;
+            }
+          }
+        }
+      }
+      .s2 {
+        margin-top: 60px;
+        .cards {
+          flex-direction: row;
+          margin-top: 30px;
+        }
+      }
+      .s3 {
+        margin-top: 60px;
+        flex-direction: row;
+        padding: 35px;
+        .lottery-description {
+          .l-title {
+            font-size: $font-xxl;
+            margin: 16px auto;
+          }
+        }
+      }
+    }
+  }
+}

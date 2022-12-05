@@ -1,0 +1,30 @@
+//TYPOGRAPHY
+$typography-primary: arial, verdana, sans-serif;
+$typography-secondary: system-ui, arial;
+
+//FONTS
+$font-small: 0.9em;
+$font-xl-responsive: 1.4em;
+$font-xl: 1.7em;
+$font-xxl: 2.2em;
+
+//COLORS
+$color-primary: #bebebe;
+$color-secondary: #f5f5f7;
+$font-color: #3e3e3e;
+$btn-prymary: rgb(24 96 179);
+$btn-secondary: rgb(0, 39, 105);
+$ofert-color: rgb(219, 14, 14);
+
+//STYLES
+$border: solid 1px $color-primary;
+
+//MIXIN
+@mixin flex-bar($display, $align, $justify, $m-width, $margin, $height) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+  max-width: $m-width;
+  margin: $margin;
+  height: $height;
+}

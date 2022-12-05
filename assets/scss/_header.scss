@@ -1,0 +1,42 @@
+@import "variables";
+
+header.line-b {
+  border-bottom: $border;
+  .wrapper .header {
+    @include flex-bar(flex, center, center, 80%, auto, 80px);
+
+    .navbar {
+      display: none;
+      .menu {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        li a.menu-items {
+          text-decoration: none;
+          color: $font-color;
+          &:hover {
+            color: $btn-secondary;
+            border-bottom: $border;
+          }
+        }
+        li a.special-item {
+          text-decoration: none;
+          color: $font-color;
+          &:hover {
+            background-color: $btn-prymary;
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+  //----------------------------RESPONSIVE----------------------------//
+  @media (min-width: 1024px) {
+    .wrapper .header {
+      justify-content: space-between;
+      .navbar {
+        display: inline;
+      }
+    }
+  }
+}

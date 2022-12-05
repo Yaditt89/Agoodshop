@@ -1,0 +1,8 @@
+@import "variables";
+
+footer.line-t {
+  border-top: $border;
+  .wrapper .w-logo-footer {
+    @include flex-bar(flex, center, center, 80%, auto, 80px);
+  }
+}

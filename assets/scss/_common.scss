@@ -1,0 +1,36 @@
+@import 'variables';
+
+body {
+  margin: 0;
+  //----------------------------SHARED STYLES----------------------------//
+  .wrapper {
+    max-width: 720px;
+    margin: auto;
+    font-family: $typography-primary;
+  }
+  .logo {
+    flex-basis: 30%;
+  }
+  .a-btn {
+    text-decoration: none;
+    border: $border;
+    padding: 7px;
+    border-radius: 7px;
+  }
+  .img-responsive {
+    max-width: 100%;
+    border-radius: 7px;
+  }
+  //----------------------------RESPONSIVE----------------------------//
+  @media (min-width: 1024px) {
+    .wrapper {
+      max-width: 1366px;
+    }
+    .logo {
+      flex-basis: 15%;
+    }
+    .a-btn {
+      padding: 13px;
+    }
+  }
+}
